@@ -4,8 +4,8 @@ import Vue from 'vue';
 // 2.0 导入App.vue的vue对象
 import App from './App.vue';
 
-import "./statics/css/base.css";
-import "./statics/mui/css/mui.css";
+import "../static/css/base.css";
+import "../static/mui/css/mui.css";
 
 
 import vueRouter from "vue-router";

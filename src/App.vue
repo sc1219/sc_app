@@ -8,10 +8,10 @@
 		</mt-header>
 		<router-view></router-view>
 		<nav class="mui-bar mui-bar-tab">
-			<a class="mui-tab-item mui-active" href="/home">
+			<router-link @click="changecolor" class="mui-tab-item" to="/home">
 				<span class="mui-icon mui-icon-home"></span>
 				<span class="mui-tab-label">首页</span>
-			</a>
+			</router-link>
 			<router-link class="mui-tab-item" to="/movie">
 				<span class="mui-icon mui-icon-videocam"></span>
 				<span class="mui-tab-label">电影</span>
@@ -33,17 +33,7 @@ export default {  // es6的导出对象的写法
 		return {
 			isshow : false
 		}
-	},
-	methods: {
-		backto(){
-//				利用路由对象中的go(-1)来实现返回到上一级页面(这个方法是vue-router的方法)
-				this.$router.go(-1);
-			}
-	},
-	created() {
-
-	},
-	watch:{
+	},watch:{
 			'$route':function(newroute,oldroute){
 				if(newroute.path.toLowerCase() == '/home'){
 					this.isshow = false;
@@ -51,7 +41,26 @@ export default {  // es6的导出对象的写法
 					this.isshow = true;
 				}
 			}
+	},
+	methods: {
+		backto(){
+//				利用路由对象中的go(-1)来实现返回到上一级页面(这个方法是vue-router的方法)
+				this.$router.go(-1);
+			},
+		changecolor(){
+			var nav = document.querySelector("nav");
+			var a = nav.getElementsByTagName("a");
+			for(var i = 0;i < a.length; i++){
+				a.onclick = function(){
+					this.style.color = "#fff";
+				}
+			}
+		}	
+	},
+	created() {
+
 	}
+	
 }
 </script>
 
@@ -69,5 +78,8 @@ export default {  // es6的导出对象的写法
 }
 .mui-bar-tab .mui-tab-item.mui-active {
 	color: #fff;
+}
+.router-link-active {
+	color: #fff !important;
 }
 </style>

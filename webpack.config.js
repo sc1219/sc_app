@@ -23,7 +23,7 @@ module.exports={
       ,
        {
         test: /\.(png|jpg|gif|ttf|svg)$/,  //打包 url请求的资源文件
-        loader:'url-loader?limit=20000' //limit表示图片的大小为20K是临界值，小于20K的图片均被打包到build.js中去，请求图片就会很快
+        loader:'url-loader?limit=10000' //limit表示图片的大小为10K是临界值，小于20K的图片均被打包到build.js中去，请求图片就会很快
       },
        {
         test: /\.js$/,  // 将.js文件中的es6语法转成es5语法

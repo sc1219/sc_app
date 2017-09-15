@@ -59,7 +59,7 @@
         </div>
       </div>
       <!--内容区-->
-      <div class="mui-card-content mui-card-media" style="height:40vw;background-image:url(./src/statics/images/bg3.jpg)">内容区</div>
+      <div class="mui-card-content mui-card-media" style="height:40vw;background-image:url()">内容区</div>
       <!--页脚，放置补充信息或支持的操作-->
       <div class="mui-card-footer">页脚</div>
     </div>
@@ -85,11 +85,17 @@ export default {
       // window.document.body.style.backgroundColor = "#8d6e63";
     },
     getimgs() {
-      this.list = ["./src/statics/images/bg1.jpg",
-        "./src/statics/images/bg2.jpg",
-        "./src/statics/images/bg3.jpg",
-        "./src/statics/images/bg4.jpg",
-        "./src/statics/images/bg5.jpg"];
+      /* this.list = ["/static/images/bg1.jpg",
+        "/static/images/bg2.jpg",
+        "/static/images/bg3.jpg",
+        "/static/images/bg4.jpg",
+        "/static/images/bg5.jpg"]; */
+        this.list = ["http://lorempixel.com/400/200/nature/",
+        "http://lorempixel.com/400/200/animals/",
+        "http://lorempixel.com/400/200/fashion/",
+        "http://lorempixel.com/400/200/technics/",
+        "http://lorempixel.com/400/200/city/",
+        ]
     }
   }
 }
@@ -100,16 +106,16 @@ export default {
   margin-bottom: 56px;
 }
 .mint-swipe {
-  height: 270px;
+  height: 200px;
 }
 
 .mint-swipe-items-wrap>div {
-  height: 270px;
+  height: 200px;
   background-color: #0094ff;
 }
 
 .mint-swipe-items-wrap img {
-  height: 270px;
+  height: 200px;
   width: 100%;
 }
 .mui-grid-view.mui-grid-9 {

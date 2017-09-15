@@ -29,7 +29,7 @@
     },
     methods: {
         getimg(){
-            this.$http.get("http://route.showapi.com/852-2?showapi_appid=45381&showapi_sign=326f542326ee48e4939176df9422efa1&type=1001").then(function(res){
+            this.$http.get("http://route.showapi.com/852-2?showapi_appid=45381&showapi_sign=326f542326ee48e4939176df9422efa1&type=3004").then(function(res){
                 console.log(res.body);
                 this.list = res.body.showapi_res_body.pagebean.contentlist;
             })
