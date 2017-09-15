@@ -62,7 +62,7 @@
   }
   img {
     width: 100%;
-    height: 300px;
+    height: 250px;
   }
   h3 {
     text-align: center;

@@ -1,5 +1,5 @@
 <template>
-    <div id='tmpl'>
+    <div id='music'>
         <a-player :music="info" :showlrc="3" :narrow="false" v-if="flag" theme="#b7daff" mode="circulation" listmaxheight='96px' ref="player"></a-player>
     </div>
 </template>
@@ -44,12 +44,48 @@ export default {
 
 }
 </script>
-<style lang="css" scoped>
-#tmpl {
-  padding-top: 40px;
-  margin-bottom: 56px;
+<style lang="css">
+#music {
+    position: absolute;
+    top: 40px;
+    bottom: 56px;
+    width: 100%;
 }
+
+/* .aplayer {
+    height: 100%;
+}
+
+.aplayer .aplayer-info {
+    height: 100% !important;
+}
+
+.aplayer .aplayer-info .aplayer-music {
+    text-align: center !important;
+}
+
+.aplayer .aplayer-lrc {
+    overflow: visible !important;
+}
+
+.aplayer-withlrc.aplayer .aplayer-pic {
+    bottom: 0 !important;
+    position: absolute;
+}
+
+.aplayer .aplayer-info .aplayer-controller {
+    bottom: 0 !important;
+    left: 0 !important;
+    position: absolute !important;
+    margin-left: 100px;
+    width: 270px;
+}
+
+.aplayer-withlrc.aplayer .aplayer-lrc {
+    margin-top: 100px;
+}
+
 .aplayer-withlrc.aplayer .aplayer-info {
-    height: 200px;
-}
+    margin-left: 0px !important;
+} */
 </style>

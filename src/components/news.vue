@@ -4,6 +4,7 @@
         <li v-for="item in list">
           <router-link v-bind="{to:'/home/news/newsinfo/'+item.id}">
             <h2>{{item.title}}</h2>
+            <span>{{item.pubDate}}</span>
             <p>{{item.desc}}</p>
           </router-link>
         </li>
@@ -64,5 +65,9 @@ li p {
   color: #000;
   font-size: 14px;
   line-height: 20px;
+  padding-top: 7px;
+}
+li span {
+  color: #666;
 }
 </style>

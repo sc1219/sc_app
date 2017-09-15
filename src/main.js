@@ -5,7 +5,7 @@ import Vue from 'vue';
 import App from './App.vue';
 
 import "./statics/css/base.css";
-import "./statics/mui/css/mui.min.css";
+import "./statics/mui/css/mui.css";
 
 
 import vueRouter from "vue-router";
@@ -29,11 +29,16 @@ import movieinfo from "./components/movieinfo.vue";
 import img from "./components/img.vue";
 import music from "./components/music.vue";
 import musicinfo from "./components/musicinfo.vue";
+import weather from "./components/weather.vue";
 
 import vueResource from "vue-resource";
 Vue.use(vueResource);
 
-
+import moment from 'moment';
+Vue.filter('datefmt', function (input, fmtstring) {
+	//	使用momentjs这个日期格式化类库实现日的格式化功能
+	return moment(input).format(fmtstring);
+});
 
 var router = new vueRouter({
 	routes:[
@@ -45,7 +50,8 @@ var router = new vueRouter({
 		{path: "/home/img",component: img},
 		{path: "/movie/movieinfo/:id",component: movieinfo},
 		{path: "/music",component:music},
-		{path: "/music/musicinfo/:id",component: musicinfo}
+		{path: "/music/musicinfo/:id",component: musicinfo},
+		{path: "/home/weather",component: weather}
 	]
 }
 )

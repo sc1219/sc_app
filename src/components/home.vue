@@ -9,7 +9,7 @@
     <div class="mui-content">
       <ul class="mui-table-view mui-grid-view mui-grid-9">
         <li class="mui-table-view-cell mui-media mui-col-xs-4">
-          <router-link to="/">
+          <router-link to="/home/weather">
             <span class="mui-icon mui-icon-spinner-cycle mui-spin"></span>
             <div class="mui-media-body">天气</div>
           </router-link>

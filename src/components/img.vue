@@ -3,8 +3,10 @@
       <ul>
           <li v-for="item in list">
               <ul>
-                  <h3>{{item.title}}</h3>
-                  <h3>时间：{{item.ct}}</h3>
+                  <li>
+                      <h4>{{item.title}}</h4>
+                      <p>时间：{{item.ct}}</p>
+                  </li>
                   <li v-for="item1 in item.list">
                       <img v-lazy="item1.middle">
                   </li>
@@ -45,6 +47,9 @@ ul,li {
     margin: 0;
     padding: 0;
     width: 100%;
+}
+li {
+    padding: 7px;
 }
 img {
     width: 100%;

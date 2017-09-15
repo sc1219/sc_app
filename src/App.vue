@@ -20,10 +20,7 @@
 				<span class="mui-icon mui-icon-mic"></span>
 				<span class="mui-tab-label">音乐</span>
 			</router-link>
-			<router-link class="mui-tab-item" to="#tabbar-with-map">
-				<span class="mui-icon mui-icon-gear"></span>
-				<span class="mui-tab-label">设置</span>
-			</router-link>
+			
 		</nav>
 	</div>
 </template>
@@ -64,6 +61,7 @@ export default {  // es6的导出对象的写法
 .mint-header {
 	background-color: #000;
 	position: fixed;
+	top: 0;
 	width: 100%;
 }
 .mui-bar-tab{

@@ -1,6 +1,7 @@
 <template>
   <div id="tmpl">
-      <h2>{{info.title}}</h2>
+      <h3>{{info.title}}</h3>
+      <span>{{info.pubDate}}</span>
       <p>{{info.desc}}</p>
       <div v-for="item in info.imageurls">
           <img :src="item.url">
@@ -45,6 +46,8 @@
     p {
         font-size: 16px;
         line-height: 27px;
+        color: #000;
+        padding-top: 10px;
     }
     img {
         width: 100%;
