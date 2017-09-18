@@ -70,6 +70,7 @@ export default {  // es6的导出对象的写法
 .mint-header {
 	background-color: #000;
 	position: fixed;
+	z-index: 1000;
 	top: 0;
 	width: 100%;
 }

@@ -45,14 +45,15 @@ ul {
 }
 
 ul,
-li {
+#tmpl li {
   list-style: none;
   padding: 0;
 }
 
 li {
   padding: 10px;
-  border-bottom: 1px solid #666;
+  border-bottom: 1px solid #000;
+  border-top: 1px solid #ccc;
 }
 
 li h2 {

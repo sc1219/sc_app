@@ -49,7 +49,7 @@
     width: 50%;
     list-style: none;
     float: left;
-    height: 350px;
+    height: 300px;
     box-sizing: border-box;
     padding: 7px;
   }
@@ -63,8 +63,10 @@
   img {
     width: 100%;
     height: 250px;
+    box-shadow: 2px 2px 2px 1px #aaa;
   }
   h4 {
+    line-height: 30px;
     text-align: center;
     color: #000;
     

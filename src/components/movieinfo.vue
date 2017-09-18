@@ -66,7 +66,7 @@ export default {
     overflow: hidden;
     padding: 10px;
     margin-bottom: 56px;
-    padding-top: 40px
+    padding-top: 45px
 }
 
 .left img {
