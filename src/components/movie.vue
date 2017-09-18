@@ -5,7 +5,7 @@
         <li v-for="item in list">
           <router-link v-bind='{to:"/movie/movieinfo/"+item.id}'>
             <img :src="item.images.large">
-            <h3>{{item.title}}</h3>
+            <h4>{{item.title}}</h4>
           </router-link>
         </li>
       
@@ -64,7 +64,9 @@
     width: 100%;
     height: 250px;
   }
-  h3 {
+  h4 {
     text-align: center;
+    color: #000;
+    
   }
 </style>
