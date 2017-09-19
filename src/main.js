@@ -30,9 +30,20 @@ import img from "./components/img.vue";
 import music from "./components/music.vue";
 import musicinfo from "./components/musicinfo.vue";
 import weather from "./components/weather.vue";
+import map from "./components/map.vue";
 
 import vueResource from "vue-resource";
 Vue.use(vueResource);
+
+import AMap from 'vue-amap';
+Vue.use(AMap);
+AMap.initAMapApiLoader({
+  key: 'your amap key',
+  plugin: ['AMap.Autocomplete', 'AMap.PlaceSearch', 'AMap.Scale', 'AMap.OverView', 'AMap.ToolBar', 'AMap.MapType', 'AMap.PolyEditor', 'AMap.CircleEditor']
+});
+
+
+
 
 import moment from 'moment';
 Vue.filter('datefmt', function (input, fmtstring) {
@@ -51,10 +62,12 @@ var router = new vueRouter({
 		{path: "/movie/movieinfo/:id",component: movieinfo},
 		{path: "/music",component:music},
 		{path: "/music/musicinfo/:id",component: musicinfo},
-		{path: "/home/weather",component: weather}
+		{path: "/home/weather",component: weather},
+		{path: "/home/map",component: map}
 	]
 }
 )
+
 
 // 3.0 利用Vue对象进行解析渲染
 new Vue({
