@@ -13,17 +13,16 @@
                 <li><b>收藏次数：</b>{{thisid.collect_count}}次</li>
             </ul>
             <div class="director" v-for="item in thisid.directors">
-                <h4>导演：</h4>
+                <h4>导  演</h4>
                 <img :src="item.avatars.large">
                 <p><b>姓名</b>：{{item.name}}</p>
-                (<a :href="item.alt">查看导演详细信息</a>)
+                <a :href="item.alt">(查看导演详细信息)</a>
             </div>
-            <h4>主演：</h4>
+            <h4>主   演</h4>
             <div class="actor" v-for="item in thisid.casts">
-                
                 <img :src="item.avatars.large">
                 <p><b>姓名</b>：{{item.name}}</p>
-                (<a :href="item.alt">查看演员详细信息</a>)
+                <a :href="item.alt">(查看演员详细信息)</a>
             </div>
         </div>
     </div>
@@ -71,6 +70,7 @@ export default {
 
 .left img {
     width: 100%;
+    box-shadow: 0px 0px 2px 2px #aaa;
 }
 
 
@@ -84,23 +84,44 @@ li {
     height: 40px;
     font-size: 18px;
     line-height: 40px;
+    border-bottom: 1px solid #ccc;
+    margin: 10px;
 }
 .director,.actor {
     overflow: hidden;
+    border-bottom: 1px solid #ccc;
+    margin: 10px;
 }
-.director h4,.right h4 {
+.right>h4 {
+    margin-left: 10px;
     font-size: 18px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    border-radius: 7px;
+    background: linear-gradient(to bottom,#aaa 0, #fff 100%);
+}
+.director h4 {
+    font-size: 18px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    border-radius: 7px;
+    background: linear-gradient(to bottom,#aaa 0, #fff 100%);
 }
 .director img,.actor img {
     width: 70px;
     float: left;
+    box-shadow: 0px 0px 1px 1px #aaa;
 }
 .director p,.actor p {
     font-size: 17px;
     padding-left: 80px;
+    padding-top: 20px;
 }
 .director a,.actor a {
     color: #0094ff;
     font-size: 16px;
+    margin-left: 50px;
 }
 </style>

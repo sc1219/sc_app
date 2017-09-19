@@ -43,8 +43,6 @@ AMap.initAMapApiLoader({
 });
 
 
-
-
 import moment from 'moment';
 Vue.filter('datefmt', function (input, fmtstring) {
 	//	使用momentjs这个日期格式化类库实现日的格式化功能
