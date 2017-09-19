@@ -42,24 +42,23 @@ ul {
   width: 100%;
   height: 100%;
   overflow: scroll;
+  list-style: none;
 }
-
-ul,
-#tmpl li {
+li {
   list-style: none;
   padding: 0;
-}
-
-li {
-  padding: 10px;
+  padding: 17px;
   border-bottom: 1px solid #000;
   border-top: 1px solid #ccc;
+  overflow: hidden;
 }
 
 li h2 {
   color: #000;
-  line-height: 30px;
-  font-size: 23px;
+  line-height: 25px;
+  font-size: 20px;
+  font-weight: normal;
+  text-shadow: 1px 1px 0px #ccc;
 }
 
 li p {
@@ -67,6 +66,8 @@ li p {
   font-size: 14px;
   line-height: 20px;
   padding-top: 7px;
+  height: 86px;
+  overflow: hidden;
 }
 li span {
   color: #666;

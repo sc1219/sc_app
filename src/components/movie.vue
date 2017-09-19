@@ -6,9 +6,9 @@
           <router-link v-bind='{to:"/movie/movieinfo/"+item.id}'>
             <img :src="item.images.large">
             <h4>{{item.title}}</h4>
+            <h5>{{item.original_title}}</h5>
           </router-link>
         </li>
-      
     </ul>
   </div>
 </template>
@@ -26,7 +26,7 @@
     methods:{
       getmovie(){
         this.$http.jsonp("https://api.douban.com/v2/movie/in_theaters").then(function(res){
-          // console.log(res.body);
+          console.log(res.body);
           this.list = res.body.subjects;
         })
       }
@@ -62,13 +62,19 @@
   }
   img {
     width: 100%;
-    height: 250px;
+    height: 240px;
     box-shadow: 2px 2px 2px 1px #aaa;
   }
   h4 {
-    line-height: 30px;
+    line-height: 20px;
     text-align: center;
+    font-size: 15px;
+    font-weight: normal;
     color: #000;
-    
+  }
+  h5 {
+    line-height: 10px;
+    font-size: 14px;
+    text-align: center;
   }
 </style>
